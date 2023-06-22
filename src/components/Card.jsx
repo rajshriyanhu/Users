@@ -30,8 +30,8 @@ const Card = ({ data }) => {
             </div>
           </div>
 
-          <div className="flex justify-between my-2 overflow-hidden whitespace-nowrap overflow-ellipsis">
-            <p className="text-slate-600">{data.email}</p>
+          <div className="flex justify-between my-2">
+            <p className="text-slate-600 overflow-hidden whitespace-nowrap overflow-ellipsis">{data.email}</p>
             <div className="text-xl pt-[4px]">
               <AiOutlineMail className="text-rose-400 cursor-pointer" />
             </div>
