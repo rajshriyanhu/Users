@@ -8,7 +8,7 @@ const TeamMember = () => {
   if (team.length === 0)
     return (
       <div className="w-full h-[91vh] flex items-center bg-slate-800">
-        <div className="mx-auto text-5xl text-slate-100">
+        <div className="mx-auto px-2 py-2 text-slate-100 md:text-4xl sm:text:2xl lg:text-5xl xl:text-5xl text-2xl">
           No members in the team. Please add members!
         </div>
       </div>
@@ -18,7 +18,7 @@ const TeamMember = () => {
     <>
       <div>
         <div className="w-full h-[8vh] flex items-center bg-slate-800">
-          <div className="mx-auto text-5xl text-slate-100">
+          <div className="mx-auto px-2 py-2 text-slate-100 md:text-4xl sm:text:2xl lg:text-5xl xl:text-5xl text-2xl">
             Your team members
           </div>
         </div>
