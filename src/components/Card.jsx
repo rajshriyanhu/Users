@@ -3,10 +3,10 @@ import { FaMale, FaFemale } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import Button from "./Button";
 
-const Card = ({ data }) => {
+const Card = ({ data, remove }) => {
   return (
     <>
-      <div className="w-60 h-min-56 mx-auto my-4 bg-slate-300 rounded-xl transform transition-all hover:translate-y-2 duration-300 shaodw-lg hover:shadow-2xl overflow-hidden">
+      <div className="z-9 w-60 h-min-56 mx-auto my-4 bg-slate-300 rounded-xl transform transition-all hover:translate-y-2 duration-300 shaodw-lg hover:shadow-2xl overflow-hidden">
         <div className="h-16 bg-blue-200 w-full relativeflex items-center jusitfy-center pt-4">
           <div className="h-20 w-20 bg-white rounded-full mx-auto left-16">
             <img
@@ -37,10 +37,16 @@ const Card = ({ data }) => {
             </div>
           </div>
           <p>{data.domain}</p>
-          <Button 
+          {!remove ? <Button 
             heading="Add to team"
             id={data.id}
-            domain={data.domain} />
+            add={true}
+            /> :
+       <Button 
+            heading="Remove from team"
+            id={data.id}
+            add={false}
+             />}
         </div>
       </div>
     </>

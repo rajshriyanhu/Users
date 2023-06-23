@@ -1,10 +1,10 @@
 import React from "react";
 import data from "../Data/data";
 import { useDispatch, useSelector } from "react-redux";
-import { addToTeam } from "../action/teamAction";
+import { addToTeam, removeFromTeam } from "../action/teamAction";
 import toast from 'react-hot-toast';
 
-const Button = ({ heading, id }) => {
+const Button = ({ heading, id, add }) => {
   const dispatch = useDispatch();
   const team = useSelector((state) => state.team);
 
@@ -34,9 +34,13 @@ const Button = ({ heading, id }) => {
     console.log(team);
   };
 
+  const handleRemoveFromTeam = () => {
+    dispatch(removeFromTeam(id));
+  }
+
   return (
     <button
-      onClick={handleAddToTeam}
+      onClick={add ? handleAddToTeam : handleRemoveFromTeam}
       className="h-10 w-full bg-blue-300 rounded-full hover:bg-blue-200 my-2 "
     >
       {heading}

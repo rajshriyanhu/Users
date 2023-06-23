@@ -6,3 +6,10 @@ export const addToTeam = (item) => {
     payload: item,
   };
 };
+
+export const REMOVE_FROM_TEAM = "REMOVE_FROM_TEAM";
+
+export const removeFromTeam = (id) => ({
+  type: REMOVE_FROM_TEAM,
+  payload: id,
+});
